@@ -12,6 +12,12 @@ class Item extends Model
         'name',
     ];
 
+    public function getPhoto(){
+        
+            return asset('storage/app/images/items_photos'.$this->photo_url);
+        
+    }
+
    /* public function users()
     {
         return $this->hasMany(User::class);

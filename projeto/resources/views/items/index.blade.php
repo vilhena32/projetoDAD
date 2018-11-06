@@ -27,7 +27,7 @@
             <td >@{{ item.name }}</td>
             <td >@{{ item.description }}</td>
             <td >@{{ item.price }}</td>
-            <td><img class="profiles" src="@{{ item.photo }}"></td>
+            <td><img v-bind:src="'images/items_photos' + item.name"></img></td>
             <td>
             <div class="inline">
                     <button type="button" class="btn btn-light">Light</button>

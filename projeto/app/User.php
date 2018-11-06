@@ -27,4 +27,20 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function isWorker()
+    {
+        if($user->type == 'manager')
+        {
+            return true;
+        }
+        if($user->type == 'waiter')
+        {
+            return true;
+        }
+        if($user->type == 'cook')
+        {
+            return true;
+        }
+    }
 }
