@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('items.index');
 });
+
+//Route::resource('items', 'ItemController');
+
+Route::apiResource('items','ItemControllerAPI');
