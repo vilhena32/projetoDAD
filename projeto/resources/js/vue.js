@@ -6,7 +6,7 @@ const app = new Vue({
     el: '#app',
     data: {
         message: 'List Users',
-        items: []
+        items: [], 
        
     },
     methods: {
@@ -28,5 +28,7 @@ const app = new Vue({
       .get('/items')
       .then(response => (this.items = response.data))
         
-    }
+    },
+
+   
 });

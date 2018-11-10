@@ -16,7 +16,7 @@
             <th>Description</th>
             <th>Price</th>
             <th>Photo</th>
-            <th>Actions</th>
+            <th  v-if="Auth">Actions</th>
         </tr>
         
         
@@ -26,10 +26,13 @@
         <tr v-for="item in items.data">
             <td >@{{ item.name }}</td>
             <td >@{{ item.description }}</td>
-            <td >@{{ item.price }}</td>
-            <td><img v-bind:src="'images/items_photos' + item.name"></img></td>
+            <td >@{{ item.price }} €</td>
+            <td><img class="item-photo" width=" 100px"
+        heigth= "100px" v-bind:src="'storage/items/'+ item.photo" ></img></td>
+            
             <td>
-            <div class="inline">
+
+            <div v-if="Auth" class="inline">
                     <button type="button" class="btn btn-light">Light</button>
                     <button type="button" class="btn btn-light">Light</button>
                     <button type="button" class="btn btn-light">Light</button>

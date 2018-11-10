@@ -14,7 +14,7 @@ class Item extends Model
 
     public function getPhoto(){
         
-            return asset('storage/app/images/items_photos'.$this->photo_url);
+            return asset('storage/app/public/items'.$this->photo_url);
         
     }
 

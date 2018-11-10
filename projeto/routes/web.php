@@ -18,6 +18,6 @@ Route::get('/', function () {
 //Route::resource('items', 'ItemController');
 
 Route::apiResource('items','ItemControllerAPI');
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
