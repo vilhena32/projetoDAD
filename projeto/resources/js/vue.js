@@ -1,12 +1,16 @@
 require('./bootstrap');
 
+
+
 window.Vue = require('vue');
 
 const app = new Vue({
     el: '#app',
     data: {
         message: 'List Users',
-        items: [], 
+        items: [],
+        resource_url: '/items',
+        
        
     },
     methods: {
@@ -23,9 +27,11 @@ const app = new Vue({
          
         }
     },
+   
+   
     mounted() {
         axios
-      .get('/items')
+      .get(resource_url)
       .then(response => (this.items = response.data))
         
     },

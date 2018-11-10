@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="jumbotron">
+<div class="jumbotron" >
     <h1>Restaurant Management</h1>
     <h2>Menu</h2>
 </div>
@@ -41,6 +41,7 @@
         </tr>
     </tbody>
 </table>
+
 
 <div class=" alert alert-success">
     <button type="button" class="close-btn" >&times;</button>
