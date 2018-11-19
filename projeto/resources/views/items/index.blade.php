@@ -8,6 +8,7 @@
     <h1>Restaurant Management</h1>
     <h2>Menu</h2>
 </div>
+
 <table class="table table-striped">
 
     <thead>

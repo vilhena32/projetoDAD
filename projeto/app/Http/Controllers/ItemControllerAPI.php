@@ -15,11 +15,33 @@ class ItemControllerAPI extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
        // dd(ItemResource::collection(Item::all()));
-        return ItemResource::collection(Item::all());
+        //return ItemResource::collection(Item::all()->paginate(5));
+
+        //if ($request->has('page')) {
+           // return ItemResource::collection(Item::paginate(5));
+        //} else {
+          //  return ItemResource::collection(Item::all());
+
+          $items = ItemResource::collection(Item::paginate(5));
+
+          $response = [
+              'pagination' => [
+                  'total' => $items->total(),
+                  'per_page' => $items->perPage(),
+                  'current_page' => $items->currentPage(),
+                  'last_page' => $items->lastPage(),
+                  'from' => $items->firstItem(),
+                  'to' => $items->lastItem()
+              ],
+              'data' => $items
+          ];
+  
+          return response()->json($response);
+       // }
 
     }
 

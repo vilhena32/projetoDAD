@@ -1,6 +1,8 @@
-require('./bootstrap');
+/*require('./bootstrap');
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
 
-
+import Index from '@/resources/views/items/index'
 
 window.Vue = require('vue');
 
@@ -37,4 +39,4 @@ const app = new Vue({
     },
 
    
-});
+});*/
